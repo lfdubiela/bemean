@@ -1,0 +1,27 @@
+
+
+block content
+  div.page-header
+    h2 Lista de cervejas
+
+  table.table
+    thead
+      tr
+        th Nome
+        th Categoria
+        th Preço
+        th Alcool
+        th Descrição
+        th &nbsp;
+    tbody
+      tr(ng-repeat='beer in beers')
+        td {{ beer.name }}
+        td {{ beer.category }}
+        td {{ beer.price }}
+        td {{ beer.alcohol }}
+        td {{ beer.description }}
+        td
+          div.btn-group
+            a.btn.btn-xs.btn-default(href='/beers/{{ beer._id }}/show') Mostrar
+            a.btn.btn-xs.btn-default(href='/beers/{{ beer._id }}/edit') Alterar
+            a.btn.btn-xs.btn-danger(ng-click='remove(beer._id)') Remover

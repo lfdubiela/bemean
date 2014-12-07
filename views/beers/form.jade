@@ -1,0 +1,24 @@
+
+
+block content
+  div.page-header
+    h2 {{ title }}
+
+  form
+    .form-group
+      label Name: 
+      input.form-control(name='name', ng-model='beer.name')
+    .form-group
+      label Category: 
+      input.form-control(name='category', ng-model='beer.category')
+    .form-group
+      label Price: 
+      input.form-control(name='price', ng-model='beer.price')
+    .form-group
+      label Alcohol: 
+      input.form-control(name='alcohol', ng-model='beer.alcohol')
+    .form-group
+      label Description: 
+      input.form-control(name='description', ng-model='beer.description')
+    button.btn.btn-success(type='button', ng-click='save()') Cadastrar
+    

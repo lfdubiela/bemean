@@ -1,0 +1,25 @@
+extends ../layout
+
+block content
+  h1 Adega Be MEAN
+  p= msg
+
+  form(action='/api/beers/#{data.id}?_method=DELETE', method='POST')
+    .form-group
+      label Name: 
+      input.form-control(value='#{data.name}', name='name')
+    .form-group
+      label Category: 
+      input.form-control(value='#{data.category}', name='category')
+    .form-group
+      label Price: 
+      input.form-control(value='#{data.price}', name='price')
+    .form-group
+      label Alcohol: 
+      input.form-control(value='#{data.alcohol}', name='alcohol')
+    .form-group
+      label Description: 
+      input.form-control(value='#{data.description}')
+    button.btn.btn-success.btn-lg(type='submit') Salvar
+    //- input(type='hidden', name='_method', value='PUT')
+    
